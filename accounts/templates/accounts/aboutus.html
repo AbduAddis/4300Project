@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<style>
+	body {
+	font-family: calibri;
+	}
+	header {
+		background-color: black;	
+		border-bottom: 15px solid black;
+		border-top: 15px solid black;
+		
+	}
+	h1, h2 {
+		color: white;
+		text-align: center;
+		margin: 0;
+		padding: 0;
+	}
+	main {
+		border-style: solid;
+		border-color: black;
+		text-align: center;
+	}
+	.Addis {
+		border-top: 5px solid black;
+		border-bottom: 5px solid black;
+	}
+	.Zach {
+		border-bottom: 5px solid black;
+	}
+	.Soham {
+		border-bottom: 5px solid black;
+	}
+	.Jacob {
+		border-bottom: 5px solid black;
+	}
+	
+	</style>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<link rel = "stylesheet" type = "text/css" href = "{% static '/css/main.css' %}">
+	<title>ABOUT US!</title>
+</head>
+
+<body>
+	{% include 'accounts/navbar.html' %}
+	<header>
+		<h1><strong>About Us!</strong></h1>
+		<h2>Group 14</h2> 
+	</header>
+	<main>
+		<p>We are a group of computer science students at the University of Georgia that came together to design, create, and produce this site. We are knowledgable in a variety of web development skills. Through the application of such skills, we created this site to be viewed and possibly used by our peers. Below are the members of the groups along with a deeper introduction into who each of us are.
+
+		<div class="Addis">
+		<h4>Addis Abdumamad</h4>
+		<img src="{% static 'images/Abdu.png' %}" alt="Addis Abdumamad">
+		<p>Abdu is a sophomore computer science major from Johns Creek, GA. His interests and hobbies include dance, photography, fishing, and hiking. He also has a passion for plumbing and pipe work. A fun fact about Abdu is that he can juggle.</p>
+		</div>
+
+		<div class="Zach">
+		<h4>Zachary Feininger</h4>
+		<img src="{% static 'images/zach.png' %}" alt="Zachary Feininger">
+		<p>Zachary is a junior computer science major from Roswell, GA. His interests include tennis, running, and hiking. He is a member of the Phi Kappa Theta Fraternity at UGA. A fun fact about Zachary is that both of this parents are twins. </p>
+		</div>
+
+		<div class="Soham">
+		<h4>Soham Thakker</h4>
+		<img src="{% static 'images/soham.png' %}" alt="Soham Thakker">
+		<p>Soham is a sophomore computer science major from Atlanta, GA. His interest include banjo, table tennis, running, and gardening. He enjoys growing vegetable and organic produce. A fun fact about Soham is that he was in a band a few years ago.</p>
+		</div>
+
+		<div class="Jacob">
+		<h4>Jacob Glover</h4>
+		<img src="{% static 'images/Jacob.png' %}" alt="Jacob Glover">
+		<p>Jacob is a junior computer science major from LaFayette, GA. His interests include guitar and photography. He is an officer of operations in Society for Cyber Security. A fun fact about Jacob is that he has been to Europe.</p>
+		</div>
+
+		<div class="Sameer">
+		<h4>Sameer Fidai</h4>
+		<img src="{% static 'images/Sameer.png' %}" alt="Sameer Fidai">
+		<p>Sameer is a sophomore computer science major from Johns Creek, GA. His interests and hobbies include bowling, cooking, baking, and flute. In addition, Sameer is involved in the community, making sure to volunteer for community service frequently. A fun fact about Sameer is that he has watched One Piece over 6 times.</p>
+		</div>
+
+	</main>
+	<footer>
+	</footer>
+</body>
+</html>
