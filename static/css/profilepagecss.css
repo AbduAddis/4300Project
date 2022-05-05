@@ -1,10 +1,22 @@
 .gradient-custom {
-    /* fallback for old browsers */
-    background: #f6d365;
-    
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(to right bottom, rgb(101, 106, 246), rgb(133, 253, 187));
-    
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to right bottom, rgb(142, 101, 246), rgb(133, 253, 153))
-    }
+  /* fallback for old browsers */
+  background: #f6d365;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(
+    to right bottom,
+    rgb(101, 106, 246),
+    rgb(133, 253, 187)
+  );
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(
+    to right bottom,
+    rgb(142, 101, 246),
+    rgb(133, 253, 153)
+  );
+}
+
+body {
+  background-color: red;
+}

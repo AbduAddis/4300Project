@@ -1,25 +1,60 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">TrucksnStuff</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          {% if company is not None %}
-          <a class="nav-link" href="{% url 'companypage' company.name %}">Home</a>
-          {% else %}
-          <a class="nav-link" href="{% url 'create_company' %}">Add company</a>
-          {% endif %}
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'profile' %}">Profile</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'about' %}">About</a>
-        </li>
-      </ul>
-    </div>
-    <span style = "color:white; padding: 0 2em 0 0">Hello, {{request.user}} </span>
-    <span><a href="{% url 'logout' %}">Logout</a></span>
-  </nav>
+  <a class="navbar-brand" href="#">TrucksnStuff</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        {% if company is not None %}
+        <a class="nav-link" href="{% url 'companypage' company.name %}">Home</a>
+        {% else %}
+        <a class="nav-link" href="{% url 'create_company' %}">Add company</a>
+        {% endif %}
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'profile' %}">Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'about' %}">About</a>
+      </li>
+    </ul>
+  </div>
+  <span style="color: white; padding: 0 2em 0 0">Hello, {{request.user}} </span>
+
+  <!-- ADDING BUTTON AND SCRIPT -->
+  <style>
+    #dark-mode-btn {
+      margin-right: 25px;
+      cursor: pointer;
+    }
+  </style>
+
+  <script>
+    function changeColor() {
+      if (document.body.style.background != "gray") {
+        document.body.style.background = "gray";
+        document.getElementById("profile-bg").style.background = "gray";
+      } else {
+        document.body.style.background = "#ebeff5";
+        document.getElementById("profile-bg").style.background = "#ebeff5";
+      }
+    }
+  </script>
+  <img
+    id="dark-mode-btn"
+    onclick="changeColor()"
+    src="/static/images/darkmode.png"
+    alt=""
+  />
+
+  <span><a href="{% url 'logout' %}">Logout</a></span>
+</nav>
