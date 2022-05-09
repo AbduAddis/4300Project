@@ -58,7 +58,6 @@ def createOrder(request,pk):
     return render(request, 'accounts/order_form.html', context)
 
 def createCompany(request):
-    print("\n\nTHE RIGHT SHIT HAS IN")
     form = companyForm(initial={'user':request.user})
     if request.method == 'POST':
         print(str(form.errors))
@@ -149,13 +148,9 @@ def deleteCustomer(request,pk):
 def registerPage(request):
     form = registerUserForm()
     if request.method == 'POST':
-        print("\n\nPOSTDATA IS GODO")
         form = registerUserForm(request.POST)
-        print("\n IS FORM VALID? " + str(form.is_valid())
-        )
         print(str(form.errors))
         if form.is_valid():
-            print("\n\nFORM IS VALID")
             form.save()
             messages.success(request,'Account was created successfully!')
             return redirect('/login')
